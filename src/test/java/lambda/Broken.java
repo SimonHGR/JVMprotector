@@ -11,11 +11,13 @@ public class Broken {
         private SecurityManager delegate = new SecurityManager(); // standard one
         @Override
         public void checkPermission(Permission p) {
-            delegate.checkPermission(p);
+            super.checkPermission(p);
+//            delegate.checkPermission(p);
         }
         @Override
         public void checkPermission(Permission p, Object context) {
-            delegate.checkPermission(p, context);
+            super.checkPermission(p, context);
+//            delegate.checkPermission(p, context);
         }
     }
     public static void main(String[] args) {
